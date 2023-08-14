@@ -1,8 +1,7 @@
 FROM debian:latest
-RUN 
+RUN pip install --upgrade
 RUN apt update && apt upgrade -y
 RUN apt install git curl python3-pip ffmpeg -y
-RUN pip install --upgrade
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get install -y nodejs && \
     npm i -g npm
